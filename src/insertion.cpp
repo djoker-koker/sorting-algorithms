@@ -2,7 +2,7 @@
 #include <algorithm>
 
 template <typename T>
-void insertion_sort(std::vector<T>& arr) {
+void insertion(std::vector<T>& arr) {
     size_t n = arr.size();
     if (n <= 1) return;
     
@@ -18,5 +18,5 @@ void insertion_sort(std::vector<T>& arr) {
     }
 }
 
-template void insertion_sort<int>(std::vector<int>& arr);
-template void insertion_sort<double>(std::vector<double>& arr);
+template void insertion<int>(std::vector<int>& arr);
+template void insertion<double>(std::vector<double>& arr);
