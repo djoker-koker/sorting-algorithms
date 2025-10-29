@@ -1,9 +1,9 @@
-#ifndef INSERTION_SORT_H
-#define INSERTION_SORT_H
+#ifndef INSERTION_H
+#define INSERTION_H
 
 #include <vector>
 
 template <typename T>
-void insertion_sort(std::vector<T>& arr);
+void insertion(std::vector<T>& arr);
 
-#endif // INSERTION_SORT_H
+#endif // INSERTION_H
