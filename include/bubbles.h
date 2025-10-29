@@ -1,9 +1,9 @@
-#ifndef BUBBLE_SORT_H
-#define BUBBLE_SORT_H
+#ifndef BUBBLE_H
+#define BUBBLE_H
 
 #include <vector>
 
 template <typename T>
-void bubble_sort(std::vector<T>& arr);
+void bubble(std::vector<T>& arr);
 
-#endif // BUBBLE_SORT_H
+#endif // BUBBLE_H
