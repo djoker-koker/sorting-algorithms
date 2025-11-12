@@ -1,19 +1,18 @@
-#include "sorting-algorithms/include/exchange.h"
-#include <algorithm>
+#include "../include/exchange_sort.h"
 
-template <typename T>
-void exchange(std::vector<T>& arr) {
-    size_t n = arr.size();
-    if (n <= 1) return;
-    
-    for (size_t i = 0; i < n - 1; i++) {
-        for (size_t j = i + 1; j < n; j++) {
+template<typename T>
+void exchangeSort(T arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
             if (arr[i] > arr[j]) {
-                std::swap(arr[i], arr[j]);
+                // Обмен элементов
+                T temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
 }
 
-template void exchange<int>(std::vector<int>& arr);
-template void exchange<double>(std::vector<double>& arr);
+template void exchangeSort<int>(int arr[], int n);
+template void exchangeSort<double>(double arr[], int n);
