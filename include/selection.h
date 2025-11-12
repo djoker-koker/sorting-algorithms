@@ -1,9 +1,4 @@
-#ifndef SELECTION_H
-#define SELECTION_H
+#pragma once
 
-#include <vector>
-
-template <typename T>
-void selection(std::vector<T>& arr);
-
-#endif // SELECTION_H
+template<typename T>
+void selectionSort(T arr[], int n);
