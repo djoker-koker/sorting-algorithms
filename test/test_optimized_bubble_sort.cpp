@@ -2,10 +2,10 @@
 #include "optimized_bubble_sort.h"
 
 TEST_CASE("Optimized Bubble Sort - Individual Assignment", "[optimized]") {
-    int arr[] = {16, 9, 5, 18, 1, 11, 7, 3};
+    int arr[] = {17, 3, 0, 12, 6, 9, 19, 1};
     optimizedBubbleSort(arr, 8);
-    REQUIRE(arr[0] == 1);
-    REQUIRE(arr[7] == 18);
+    REQUIRE(arr[0] == 0);
+    REQUIRE(arr[7] == 19);
 }
 
 TEST_CASE("Optimized Bubble Sort - Empty Array", "[optimized]") {
@@ -15,13 +15,13 @@ TEST_CASE("Optimized Bubble Sort - Empty Array", "[optimized]") {
 }
 
 TEST_CASE("Optimized Bubble Sort - Single Element", "[optimized]") {
-    int arr[] = {42};
+    int arr[] = {17};
     optimizedBubbleSort(arr, 1);
-    REQUIRE(arr[0] == 42);
+    REQUIRE(arr[0] == 17);
 }
 
 TEST_CASE("Optimized Bubble Sort - Double Type", "[optimized]") {
-    double arr[] = {3.5, 1.2, 4.8};
+    double arr[] = {4.2, 1.5, 5.8};
     optimizedBubbleSort(arr, 3);
-    REQUIRE(arr[0] == 1.2);
+    REQUIRE(arr[0] == 1.5);
 }
