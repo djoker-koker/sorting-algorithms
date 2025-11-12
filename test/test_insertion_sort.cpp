@@ -21,7 +21,7 @@ TEST_CASE("Insertion Sort - Single Element", "[insertion]") {
 }
 
 TEST_CASE("Insertion Sort - Double Type", "[insertion]") {
-    double arr[] = {3.5, 1.2, 4.8};
+    double arr[] = {4.2, 1.5, 5.8};
     insertionSort(arr, 3);
-    REQUIRE(arr[0] == 1.2);
+    REQUIRE(arr[0] == 1.5);
 }
