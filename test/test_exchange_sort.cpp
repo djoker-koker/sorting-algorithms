@@ -2,10 +2,10 @@
 #include "exchange_sort.h"
 
 TEST_CASE("Exchange Sort - Individual Assignment", "[exchange]") {
-    int arr[] = {16, 9, 5, 18, 1, 11, 7, 3};
+    int arr[] = {17, 3, 0, 12, 6, 9, 19, 1};
     exchangeSort(arr, 8);
-    REQUIRE(arr[0] == 1);
-    REQUIRE(arr[7] == 18);
+    REQUIRE(arr[0] == 0);
+    REQUIRE(arr[7] == 19);
 }
 
 TEST_CASE("Exchange Sort - Empty Array", "[exchange]") {
@@ -15,9 +15,9 @@ TEST_CASE("Exchange Sort - Empty Array", "[exchange]") {
 }
 
 TEST_CASE("Exchange Sort - Single Element", "[exchange]") {
-    int arr[] = {42};
+    int arr[] = {17};
     exchangeSort(arr, 1);
-    REQUIRE(arr[0] == 42);
+    REQUIRE(arr[0] == 17);
 }
 
 TEST_CASE("Exchange Sort - Already Sorted", "[exchange]") {
