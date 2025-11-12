@@ -1,9 +1,4 @@
-#ifndef EXCHANGE_H
-#define EXCHANGE_H
+#pragma once
 
-#include <vector>
-
-template <typename T>
-void exchange(std::vector<T>& arr);
-
-#endif // EXCHANGE_H
+template<typename T>
+void exchangeSort(T arr[], int n);
