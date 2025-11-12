@@ -2,10 +2,10 @@
 #include "insertion_sort.h"
 
 TEST_CASE("Insertion Sort - Individual Assignment", "[insertion]") {
-    int arr[] = {16, 9, 5, 18, 1, 11, 7, 3};
+    int arr[] = {17, 3, 0, 12, 6, 9, 19, 1};
     insertionSort(arr, 8);
-    REQUIRE(arr[0] == 1);
-    REQUIRE(arr[7] == 18);
+    REQUIRE(arr[0] == 0);
+    REQUIRE(arr[7] == 19);
 }
 
 TEST_CASE("Insertion Sort - Empty Array", "[insertion]") {
@@ -15,9 +15,9 @@ TEST_CASE("Insertion Sort - Empty Array", "[insertion]") {
 }
 
 TEST_CASE("Insertion Sort - Single Element", "[insertion]") {
-    int arr[] = {42};
+    int arr[] = {17};
     insertionSort(arr, 1);
-    REQUIRE(arr[0] == 42);
+    REQUIRE(arr[0] == 17);
 }
 
 TEST_CASE("Insertion Sort - Double Type", "[insertion]") {
