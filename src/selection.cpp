@@ -1,25 +1,21 @@
-#include "sorting-algorithms/include/selection.h"
-#include <algorithm>
+#include "../include/selection_sort.h"
 
-template <typename T>
-void selection(std::vector<T>& arr) {
-    size_t n = arr.size();
-    if (n <= 1) return;
-    
-    for (size_t i = 0; i < n - 1; i++) {
-        size_t min_index = i;
-        
-        for (size_t j = i + 1; j < n; j++) {
-            if (arr[j] < arr[min_index]) {
-                min_index = j;
+template<typename T>
+void selectionSort(T arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
             }
         }
-        
-        if (min_index != i) {
-            std::swap(arr[i], arr[min_index]);
+        if (minIndex != i) {
+            T temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
     }
 }
 
-template void selection<int>(std::vector<int>& arr);
-template void selection<double>(std::vector<double>& arr);
+template void selectionSort<int>(int arr[], int n);
+template void selectionSort<double>(double arr[], int n);
